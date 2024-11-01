@@ -1,0 +1,26 @@
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+#keycloak:
+#  auth-server-url: https://keycloak.apimdemo119.skcloud.io
+#  realm: kong
+#  resource: kong-client
+#  public-client: false
+#  credentials:
+#    secret: LDmiCOiO1txvf0oRNPvc1ZjfNdfdycpZ
+
+logging:
+  level:
+    io.skcloud: debug
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    operationsSorter: alpha
+    tagsSorter: alpha
+  api-docs:
+    path: /v3/api-docs
+
+server:
+  port: 8090

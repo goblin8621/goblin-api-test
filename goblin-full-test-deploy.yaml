@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy-goblin-test
+  labels:
+    app: goblin-test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: goblin-test
+  template:
+    metadata:
+      labels:
+        app: goblin-test
+    spec:
+      containers:
+      - env:
+        - name: SPRING_PROFILES_ACTIVE
+          value: k8s
+        name: goblin-test
+        image: harbor.ops.action.cloudz.co.kr/apim/apim-goblin-test:0.0.7
+        ports:
+        - containerPort: 8081
+        imagePullPolicy: Always
+      imagePullSecrets:
+      - name: regsecret
