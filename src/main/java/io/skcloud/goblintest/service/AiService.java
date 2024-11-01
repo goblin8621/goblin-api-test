@@ -14,11 +14,11 @@ import java.util.Map;
 @Service
 public class AiService {
     private static final String OPENAI_URL = "https://api.openai.com/v1/engines/davinci-codex/completions";
-    private static final String API_KEY = "aaa"; // 여기에 API 키를 입력합니다
+    private static final String AAA = "aaa"; // 여기에 API 키를 입력합니다
 
 
     private static final String NAI_URL = "https://api.novelai.net/ai/generate-image";
-    private static final String ACCESS_TOKEN = "";
+    private static final String bbb = "";
 
     @Autowired
     private WebClient webClient;
@@ -30,7 +30,7 @@ public class AiService {
         requestBody.put("max_tokens", 5);
         Mono<String> responseMono = webClient.post()
                 .uri(OPENAI_URL)
-                .header("Authorization", "Bearer " + API_KEY)
+                .header("Authorization", "Bearer " + AAA)
                 .contentType(MediaType.APPLICATION_JSON)
                 .bodyValue(requestBody)
                 .retrieve()
@@ -44,7 +44,7 @@ public class AiService {
 
         Mono<String> responseMono = webClient.post()
                 .uri(NAI_URL)
-                .header("Authorization", "Bearer " + ACCESS_TOKEN)
+                .header("Authorization", "Bearer " + bbb)
                 .contentType(MediaType.APPLICATION_JSON)
                 .bodyValue(imageGenerationRequest)
                 .retrieve()
