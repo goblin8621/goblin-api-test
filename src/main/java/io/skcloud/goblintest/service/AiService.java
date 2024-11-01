@@ -14,11 +14,11 @@ import java.util.Map;
 @Service
 public class AiService {
     private static final String OPENAI_URL = "https://api.openai.com/v1/engines/davinci-codex/completions";
-    private static final String API_KEY = "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"; // 여기에 API 키를 입력합니다
+    private static final String API_KEY = "aaa"; // 여기에 API 키를 입력합니다
 
 
     private static final String NAI_URL = "https://api.novelai.net/ai/generate-image";
-    private static final String ACCESS_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InNwV0xOLXIzd3JfYkM5cFJOWE40WSIsIm5jIjoiYkt2VnU4Mi11VDJxdU4wYXUxUlhyIiwiaWF0IjoxNzA1MDIwNDM4LCJleHAiOjE3MDc2MTI0Mzh9.9_i9i_ey8Tvm0arSIVeJp_qz43aXsO9ACe-DZBExyZw";
+    private static final String ACCESS_TOKEN = "";
 
     @Autowired
     private WebClient webClient;
